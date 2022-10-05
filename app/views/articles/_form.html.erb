@@ -1,0 +1,22 @@
+<%= form_with model: article do |form| %>
+    <div>
+        <%= form.label :title %> <%# cria o campo de texto%>
+        <%= form.text_field :title %>
+        <% article.errors.full_messages_for(:title).each do |message| %> <%# exibir as mensagens de erros%>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :body %> <%# cria o campo de area%>
+        <%= form.text_area :body %>
+        <% article.errors.full_messages_for(:body).each do |message| %> <%# exibir as mensagens de erros%>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %> <%# cria um botão para o create%>
+    </div>
+
+<% end %>

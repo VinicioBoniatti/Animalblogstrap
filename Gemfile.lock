@@ -91,7 +91,6 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
-    devise-i18n-views (0.3.7)
     erubi (1.11.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -271,7 +270,6 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise (~> 4.8)
   devise-i18n
-  devise-i18n-views (~> 0.3.7)
   groupdate (~> 6.1)
   jbuilder (~> 2.7)
   kaminari (~> 1.2)

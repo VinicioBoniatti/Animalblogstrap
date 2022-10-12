@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
     
   end
 
-  def show
+  def show 
     @article = Article.includes(comments: :user).find(params[:id])
     authorize @article
    end

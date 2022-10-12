@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
                        .filter_by_archive(params[:month_year])
                        .desc_order.page(current_page)
 
-    @archives = Article.group_by_month(:created_at, format: "%b %Y").count
+    @archives = Article.group_by_month(:created_at, format: "%b %Y", locale: :en).count
     
   end
 

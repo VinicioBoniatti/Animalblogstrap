@@ -76,3 +76,6 @@ gem 'rolify', '~> 5.2'
 gem "groupdate", "~> 6.1"
 
 gem 'pg', '~> 1.4', '>= 1.4.3', group: :production
+
+gem 'devise-i18n'
+

@@ -1,5 +1,5 @@
 module ArticlesHelper
     def month_day_comma_year(datetime)
-        datetime.strftime('%B %e, %Y') # documentação para data
+        l(datetime, format: '%B %e, %Y').capitalize # documentação para data
     end
 end

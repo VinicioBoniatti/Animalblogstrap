@@ -1,0 +1,11 @@
+en:
+  articles:
+    continue_reading: Continue reading...
+    about:
+      title: About
+      description: I'm Vinicio Boniatti. I'm student of development with ruby ​​on rails.
+    archives: Archives
+    elsewhere: Portfolio
+    index:
+      subtitle: More pet's
+      new_article: New pet

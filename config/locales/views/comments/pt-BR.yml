@@ -1,0 +1,7 @@
+pt-BR:
+  comments:
+    index:
+      commenter: Comentarista
+      destroy: 
+        title: Deletar
+        confirm: Você está certo?

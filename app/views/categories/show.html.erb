@@ -1,6 +1,6 @@
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('categories.new.title')%></strong>
   <%= @category.name %>
 </p>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to t('categories.new.edit.title'), edit_category_path(@category) %> |
+<%= link_to t('categories.new.back.title'), categories_path %>

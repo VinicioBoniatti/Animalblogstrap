@@ -1,0 +1,12 @@
+
+pt-BR:
+  activerecord:
+    models:
+      article:
+        one: Pet
+        other: Pets
+    attributes:
+      article:
+        title: Nome do Pet
+        body: Descrição
+        category: Raça

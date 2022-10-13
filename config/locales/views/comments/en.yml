@@ -1,0 +1,7 @@
+en:
+  comments:
+    index:
+      commenter: Commenter
+      destroy: 
+        title: Destroy
+        confirm: Are you sure?

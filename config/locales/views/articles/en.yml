@@ -9,3 +9,23 @@ en:
     index:
       subtitle: More pet's
       new_article: New pet
+    new:
+      title: New Pet
+    create:
+      success: Pet was successfully created.
+    update:
+      success: Pet was successfully updated.
+      title: Update Pet
+    destroy:
+      success: Pet was successfully destroyed.
+      confirm: Are you sure?
+    form:
+      choose_category: Choose a Breed
+      back: back
+    show:
+      comments: Comments
+      add_comment: "Add a comment:"
+      login_create_comment: Please, login to create a comment.
+      edit: Edit
+      destroy: Destoy
+      back: Back

@@ -1,0 +1,16 @@
+en:
+  categories:
+    new:
+      title: New Breed 
+      back: 
+        title: Back
+      creat: 
+        title: Creat
+        sucess: Breed was successfully created.
+      edit: 
+        title: Edit
+        sucess: Breed was successfully edited.
+      destroy: 
+        title: Destroy
+        sucess: Breed was successfully destroy.
+        confirm: Are you sure?

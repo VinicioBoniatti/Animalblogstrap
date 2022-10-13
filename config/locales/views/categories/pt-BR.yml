@@ -1,0 +1,16 @@
+pt-BR:
+  categories:
+    new:
+      title: Nova Raça
+      back: 
+        title: Voltar
+      creat: 
+        title: Criar
+        sucess: Raça foi criada com sucesso.
+      edit: 
+        title: Editar
+        sucess: Raça foi editada com sucesso.
+      destroy: 
+        title: Deletar
+        sucess: Raça foi deletada com sucesso.
+        confirm: Você está certo?

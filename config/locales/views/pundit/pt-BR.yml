@@ -1,0 +1,9 @@
+pt-BR:
+ pundit:
+   default: 'Você não está autorizado a realizar esta ação.'
+   category_policy:
+     edit?: 'Você não pode editar essa raça.'
+     update?: 'Você não pode atualizar essa raça.'
+     new?: 'Você não pode criar essa raça.'
+     create?: 'Você não pode criar essa raça.' 
+     destroy?: 'Você não pode destruir essa raça.' 

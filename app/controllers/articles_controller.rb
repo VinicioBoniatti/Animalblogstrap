@@ -2,15 +2,17 @@ class ArticlesController < ApplicationController
   include Paginable
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
-  before_action :set_categories, only: %i[new create edit update]
+  before_action :set_categories, only: %i[index new create edit update]
 
   def index
-    @categories = Category.sorted
-    category = @categories.select { |c| c.name == params[:category]}[0] if params[:category].present?
+    @archives = Article.group_by_month(:created_at, format: "%b %Y", locale: :en).count
+
+    category = @categories.find { |c| c.name == params[:category] } if params[:category].present?
+    month_year = @archives.find { |m| m[0] == params[:month_year] }&.first if params[:month_year].present?
 
     @highlights = Article.includes(:category, :user)
                          .filter_by_category(category)
-                         .filter_by_archive(params[:month_year])
+                         .filter_by_archive(month_year)
                          .desc_order
                          .first(3)
 
@@ -21,10 +23,9 @@ class ArticlesController < ApplicationController
     @articles = Article.includes(:category, :user)
                        .without_highlights(highlights_ids)
                        .filter_by_category(category)
-                       .filter_by_archive(params[:month_year])
+                       .filter_by_archive(month_year)
                        .desc_order.page(current_page)
 
-    @archives = Article.group_by_month(:created_at, format: "%b %Y", locale: :en).count
     
   end
 
@@ -41,7 +42,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new(article_params)
 
     if @article.save
-      redirect_to @article, notice: 'Article was successfully created.'
+      redirect_to @article, notice: t('articles.create.success')
     else
       render :new
     end
@@ -51,7 +52,7 @@ class ArticlesController < ApplicationController
 
   def update 
     if @article.update(article_params)
-      redirect_to @article, notice: 'Article was successfully updated.'
+      redirect_to @article, notice: t('articles.update.success')
     else
       render :edit
     end
@@ -59,7 +60,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to root_path, notice: 'Article was successfully destroyed.'
+    redirect_to root_path, notice: t('articles.destroy.success')
   end
 
   private 

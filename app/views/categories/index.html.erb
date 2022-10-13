@@ -1,12 +1,12 @@
-<h1>Categories</h1>
+<h1><%= t Category.model_name.human(count: 2) %></h1>
 
-<p><%= link_to 'New category ', new_category_path, 
+<p><%= link_to t('categories.new.title'), new_category_path, 
   class: 'btn btn-primary' if policy(:category).new?  %></p>
 
 <table class="table table-striped-columns table-hover table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= t(Category.human_attribute_name('name')) %></th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) if policy(category).edit? %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } if policy(category).destroy? %></td>
+        <td><%= link_to t('categories.new.edit.title'), edit_category_path(category) if policy(category).edit? %></td>
+        <td><%= link_to t('categories.new.destroy.title'), category, method: :delete, data: { confirm: t('categories.new.destroy.confirm') } if policy(category).destroy? %></td>
       </tr>
     <% end %>
   </tbody>

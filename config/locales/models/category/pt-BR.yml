@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      category:
+        one: Raça
+        other: Raças
+    attributes:
+      category:
+        articles: Posts
+        name: Nome

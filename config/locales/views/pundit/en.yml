@@ -1,0 +1,9 @@
+en:
+ pundit:
+   default: 'You cannot not authorized this action.'
+   category_policy:
+     edit?: 'You cannot edit this post!'
+     update?: 'You cannot update this post!'
+     new?: 'You cannot create this post!'
+     create?: 'You cannot create posts!'  
+     destroy?: 'You cannot destroy posts!' 

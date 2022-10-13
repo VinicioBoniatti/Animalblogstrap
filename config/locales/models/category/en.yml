@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      category:
+        one: Animal breed
+        other: Animals breeds
+    attributes:
+      category:
+        articles: Posts
+        name: Name

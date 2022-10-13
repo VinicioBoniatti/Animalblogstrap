@@ -9,3 +9,24 @@ pt-BR:
     index:
       subtitle: Mais pet's
       new_article: Novo pet
+    new:
+      title: Novo Pet
+    create:
+      success: Pet foi criado com sucesso.
+    update:
+      success: Pet foi alterado com sucesso.
+      title: Atualizar Pet
+    destroy:
+      success: Pet foi excluído com sucesso.
+      confirm: Voce está certo?
+    form:
+      choose_category: Escolha uma Raça
+      back: voltar
+    show:
+      comments: Comentários
+      add_comment: "Adicione um comentário:"
+      login_create_comment: Por favor, faça o login para criar um comentário.
+      edit: Editar
+      destroy: Deletar
+      back: Voltar
+    
